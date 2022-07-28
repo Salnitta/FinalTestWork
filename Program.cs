@@ -46,3 +46,20 @@ string PrintArray(string[] array)
     }
     return output;
 }
+
+int length = 3;
+Random rnd = new Random(); 
+int size = rnd.Next(3, 6); // диапазон от 3 до 5 выбран, чтобы генерация с консоли у проверяющего не занимала много времени
+
+string[] inputArray = CreateArray(size);
+FillArray(inputArray);
+string input = PrintArray(inputArray);
+Console.WriteLine("Input array:");
+Console.WriteLine(input);
+
+int count = ElementsCounter(inputArray, length);
+string[] outputArray = CreateArray(count);
+outputArray = MainTask(inputArray, outputArray, length);
+string output = PrintArray(outputArray);
+Console.WriteLine("Output array:");
+Console.WriteLine(output);
