@@ -36,3 +36,13 @@ string[] MainTask(string[] array, string[] result, int length)
     }
     return result;
 }
+
+string PrintArray(string[] array)
+{
+    string output = String.Empty;
+    for (int i = 0; i < array.Length; i++)
+    {
+        output += ($"string[{i + 1}]: {array[i]} \n");
+    }
+    return output;
+}
