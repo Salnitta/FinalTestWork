@@ -22,3 +22,17 @@ int ElementsCounter(string[] array, int length)
     }
     return count;
 }
+
+string[] MainTask(string[] array, string[] result, int length) 
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= length)
+        {
+        result[count] = array[i];
+        count++;
+        }
+    }
+    return result;
+}
